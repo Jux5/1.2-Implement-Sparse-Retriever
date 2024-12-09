@@ -7,7 +7,7 @@ This repo is heavily inspired by Group 1.2. It lets you create sample answers fr
 ## Steps to reproduce
 
 
-- Run `docker compose up --build -d`
+- Run `docker-compose up --build -d`
 - Download required ollama model via `docker exec <container_id> ollama pull llama3.2:1b` (get container id by running `docker ps`)
 - Change HOW_MANY in .env, for  desired sample size
 - Use the main.ipynb to create sample answers and questions for evaluating in final.csv
