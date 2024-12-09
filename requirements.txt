@@ -1,0 +1,12 @@
+haystack-ai==2.7.0
+unstructured-fileconverter-haystack==0.4.1
+qdrant-haystack==7.0.0
+sentence-transformers==3.3.0
+python-dotenv==1.0.1
+fastembed-haystack==1.4.1
+ollama-haystack==2.1.0
+accelerate==0.26.0
+datasets==3.1.0
+huggingface_hub==0.26.5
+bitsandbytes==0.45.0
+nvcc4jupyter==1.2.1

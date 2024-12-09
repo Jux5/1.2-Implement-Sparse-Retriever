@@ -1,0 +1,43 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile_indexing
+    ports:
+      - "4000:4000"  # Adjust if your app serves HTTP traffic
+    volumes:
+      - ./data:/app/data  # Mount local data directory into the container
+    env_file:
+      - .env
+    depends_on:
+      - qdrant
+    restart: on-failure
+    networks:
+      - qdrant_network
+
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"  # Expose Qdrant's port
+    restart: on-failure
+    networks:
+      - qdrant_network
+
+  ollama:
+    image: ollama/ollama
+    pull_policy: always
+    ports:
+      - "11434:11434"  # Ollama API port
+    volumes:
+      - ollama:/root/.ollama  # Persist data in the 'ollama' volume
+    restart: on-failure
+    networks:
+      - qdrant_network
+
+volumes:
+  ollama:  # Define the named volume
+
+networks:
+  qdrant_network:
+    driver: bridge
+

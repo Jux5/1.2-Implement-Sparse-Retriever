@@ -1,0 +1,7 @@
+FROM deepset/haystack:base-main
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+#CMD ["python", "scripts/indexing.py"]
