@@ -14,3 +14,6 @@ This repo is heavily inspired by Group 1.2. It lets you create sample answers fr
   - Alternative `!pip install -r requirements.txt` and `python main.py`
 - Open [Colab-Eval](https://colab.research.google.com/drive/13wrtX95EBizfnHE3PvGRENG_FolDwYep?usp=sharing) and upload final.csv
 - Run the notebook to get the results in the last cell
+
+## Other
+The Evaluation tool ist also availibe as a notebook, but depends on CUDA GPU, thats why we run it on COLAB
